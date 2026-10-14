@@ -184,14 +184,26 @@
             height: 230px;
             margin: 10px auto 5px;
             z-index: 2;
-            animation: floatBalloonHero 4s ease-in-out infinite alternate;
-            filter: drop-shadow(0 20px 35px rgba(0,0,0,0.9)) drop-shadow(0 0 30px rgba(255,255,255,0.18));
+            animation: jumpAndShift23 2.4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
             cursor: pointer;
         }
 
-        @keyframes floatBalloonHero {
-            0% { transform: translateY(0px) rotate(-1deg) scale(1); }
-            100% { transform: translateY(-12px) rotate(1.5deg) scale(1.02); }
+        @keyframes jumpAndShift23 {
+            0%, 100% {
+                transform: translateY(0) scale(1, 1);
+                filter: drop-shadow(0 18px 28px rgba(0,0,0,0.9)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.45));
+            }
+            15% {
+                transform: translateY(6px) scale(1.04, 0.95);
+            }
+            45% {
+                transform: translateY(-22px) scale(0.97, 1.05) rotate(-1.5deg);
+                filter: drop-shadow(0 30px 40px rgba(0,0,0,0.95)) drop-shadow(0 0 38px rgba(255, 166, 197, 0.85));
+            }
+            75% {
+                transform: translateY(-6px) scale(1.01, 0.99) rotate(1deg);
+                filter: drop-shadow(0 22px 32px rgba(0,0,0,0.9)) drop-shadow(0 0 32px rgba(216, 220, 227, 0.65));
+            }
         }
 
         .hero-name {
@@ -201,9 +213,31 @@
             line-height: 1;
             margin: 5px 0 22px;
             padding: 5px 20px;
-            text-shadow: 0 5px 25px rgba(255, 255, 255, 0.4);
             position: relative;
             z-index: 3;
+            display: inline-block;
+            animation: jumpAndShiftName 2.4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite 0.18s;
+        }
+
+        @keyframes jumpAndShiftName {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                color: #ffffff;
+                text-shadow: 0 5px 25px rgba(255, 255, 255, 0.6), 0 0 15px rgba(216, 220, 227, 0.8);
+            }
+            15% {
+                transform: translateY(4px) scale(1.03, 0.96);
+            }
+            45% {
+                transform: translateY(-18px) scale(1.05);
+                color: #ffb6c9;
+                text-shadow: 0 8px 30px rgba(255, 145, 179, 0.9), 0 0 20px rgba(255, 192, 209, 0.95);
+            }
+            70% {
+                transform: translateY(-4px) scale(0.99, 1.01);
+                color: #e4e8f0;
+                text-shadow: 0 5px 25px rgba(216, 220, 227, 0.8), 0 0 18px rgba(255, 255, 255, 0.7);
+            }
         }
 
         .hero-quote {
@@ -1065,15 +1099,29 @@
             <div class="foil-23-container" onclick="triggerCelebrationBurst()" title="¡Toca para celebrar!">
                 <svg viewBox="0 0 360 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <!-- Degradado Metálico Efecto Globo Inflado -->
+                        <!-- Degradado Metálico Efecto Globo Inflado que cambia entre Plateado y Rosita -->
                         <linearGradient id="silverFoil" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ffffff"/>
-                            <stop offset="18%" stop-color="#d5d9e2"/>
-                            <stop offset="35%" stop-color="#8b929e"/>
-                            <stop offset="50%" stop-color="#ffffff"/>
-                            <stop offset="68%" stop-color="#aeb5c2"/>
-                            <stop offset="85%" stop-color="#6e7480"/>
-                            <stop offset="100%" stop-color="#f3f5f8"/>
+                            <stop offset="0%" stop-color="#ffffff">
+                                <animate attributeName="stop-color" values="#ffffff;#fff0f5;#ffffff" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="18%" stop-color="#d5d9e2">
+                                <animate attributeName="stop-color" values="#d5d9e2;#f8bbd0;#d5d9e2" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="35%" stop-color="#8b929e">
+                                <animate attributeName="stop-color" values="#8b929e;#d47a96;#8b929e" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="50%" stop-color="#ffffff">
+                                <animate attributeName="stop-color" values="#ffffff;#ffe4ec;#ffffff" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="68%" stop-color="#aeb5c2">
+                                <animate attributeName="stop-color" values="#aeb5c2;#f498b5;#aeb5c2" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="85%" stop-color="#6e7480">
+                                <animate attributeName="stop-color" values="#6e7480;#b55d78;#6e7480" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="100%" stop-color="#f3f5f8">
+                                <animate attributeName="stop-color" values="#f3f5f8;#ffd6e4;#f3f5f8" dur="2.4s" repeatCount="indefinite"/>
+                            </stop>
                         </linearGradient>
                         <linearGradient id="foilHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
                             <stop offset="0%" stop-color="rgba(255,255,255,0.95)"/>
@@ -1092,7 +1140,10 @@
                     
                     <!-- Números "23" estilo globo inflado metálico con pliegues -->
                     <g filter="url(#balloonBevel)">
-                        <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="url(#silverFoil)" stroke="#e2e6ee" stroke-width="5" stroke-linejoin="round" letter-spacing="-10">23</text>
+                        <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="url(#silverFoil)" stroke="#e2e6ee" stroke-width="5" stroke-linejoin="round" letter-spacing="-10">
+                            23
+                            <animate attributeName="stroke" values="#e2e6ee;#ffc2d4;#e2e6ee" dur="2.4s" repeatCount="indefinite"/>
+                        </text>
                         <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="none" stroke="url(#foilHighlight)" stroke-width="8" stroke-dasharray="18 10" letter-spacing="-10" opacity="0.65">23</text>
                     </g>
                     <!-- Destellos estrella sobre el globo -->
