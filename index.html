@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celebremos mis 23 - Olivia</title>
+    <title>Mis 15 - Arturo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -11,16 +11,14 @@
     <style>
         :root {
             --night-black: #050507;
-            --night-card: #0e0e12;
+            --night-card: #0e1116;
             --silver-light: #ffffff;
             --silver-mid: #d8dce3;
             --silver-dark: #8e96a4;
-            --pearl-pink: #fceef2;
-            --blush-pink: #f6d8e0;
-            --blush-bg: #fae6ec;
-            --rose-wine: #a9405b;
-            --champagne-gold: #b89758;
-            --gold-light: #e5c98b;
+            --ice-blue: #eef4fc;
+            --neon-blue: #60a5fa; /* Azul vibrante para acentos */
+            --dark-blue: #1e3a8a;
+            --champagne-gold: #94a3b8; /* Cambiado a un tono plata/acero */
         }
 
         * {
@@ -63,7 +61,7 @@
             bottom: -220px;
             animation: riseUpContinuous linear infinite;
             will-change: transform;
-            filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.8));
         }
 
         @keyframes riseUpContinuous {
@@ -94,9 +92,9 @@
             width: 54px;
             height: 54px;
             border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fff0f5, #e2b8c6 60%, #9e6b7b);
+            background: radial-gradient(circle at 30% 30%, #e6f0ff, #8ab4f8 60%, #3b82f6);
             border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 25px rgba(246, 216, 224, 0.6), 0 8px 20px rgba(0,0,0,0.8);
+            box-shadow: 0 0 25px rgba(96, 165, 250, 0.5), 0 8px 20px rgba(0,0,0,0.8);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,7 +104,7 @@
 
         .music-control:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 35px rgba(246, 216, 224, 0.9);
+            box-shadow: 0 0 35px rgba(96, 165, 250, 0.8);
         }
 
         .music-control.playing {
@@ -114,8 +112,8 @@
         }
 
         @keyframes pulseGlow {
-            0% { box-shadow: 0 0 15px rgba(246, 216, 224, 0.5); transform: scale(1); }
-            100% { box-shadow: 0 0 32px rgba(246, 216, 224, 0.95); transform: scale(1.06); }
+            0% { box-shadow: 0 0 15px rgba(96, 165, 250, 0.4); transform: scale(1); }
+            100% { box-shadow: 0 0 32px rgba(96, 165, 250, 0.85); transform: scale(1.06); }
         }
 
         .music-waves {
@@ -127,7 +125,7 @@
 
         .music-waves span {
             width: 3px;
-            background: #2b141c;
+            background: #0b1a30;
             border-radius: 2px;
             height: 6px;
             transition: height 0.2s ease;
@@ -149,7 +147,7 @@
             position: relative;
             z-index: 10;
             box-shadow: 0 0 80px rgba(0,0,0,0.95);
-            background: rgba(5, 5, 7, 0.75);
+            background: rgba(5, 6, 8, 0.85);
             backdrop-filter: blur(2px);
         }
 
@@ -163,7 +161,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.08) 0%, rgba(5, 5, 7, 0.95) 75%);
+            background: radial-gradient(circle at 50% 35%, rgba(96, 165, 250, 0.08) 0%, rgba(5, 6, 8, 0.95) 75%);
         }
 
         .script-top {
@@ -178,37 +176,37 @@
             animation: fadeInDown 1.2s ease-out;
         }
 
-        .foil-23-container {
+        .foil-15-container {
             position: relative;
             width: 320px;
             height: 230px;
             margin: 10px auto 5px;
             z-index: 2;
-            animation: jumpAndShift23 2.4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+            animation: jumpAndShift15 2.4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
             cursor: pointer;
         }
 
-        @keyframes jumpAndShift23 {
+        @keyframes jumpAndShift15 {
             0%, 100% {
                 transform: translateY(0) scale(1, 1);
-                filter: drop-shadow(0 18px 28px rgba(0,0,0,0.9)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.45));
+                filter: drop-shadow(0 18px 28px rgba(0,0,0,0.9)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.35));
             }
             15% {
                 transform: translateY(6px) scale(1.04, 0.95);
             }
             45% {
                 transform: translateY(-22px) scale(0.97, 1.05) rotate(-1.5deg);
-                filter: drop-shadow(0 30px 40px rgba(0,0,0,0.95)) drop-shadow(0 0 38px rgba(255, 166, 197, 0.85));
+                filter: drop-shadow(0 30px 40px rgba(0,0,0,0.95)) drop-shadow(0 0 38px rgba(96, 165, 250, 0.75));
             }
             75% {
                 transform: translateY(-6px) scale(1.01, 0.99) rotate(1deg);
-                filter: drop-shadow(0 22px 32px rgba(0,0,0,0.9)) drop-shadow(0 0 32px rgba(216, 220, 227, 0.65));
+                filter: drop-shadow(0 22px 32px rgba(0,0,0,0.9)) drop-shadow(0 0 32px rgba(186, 212, 255, 0.55));
             }
         }
 
         .hero-name {
             font-family: 'Alex Brush', cursive;
-            font-size: 6.2rem;
+            font-size: 6.5rem;
             color: #ffffff;
             line-height: 1;
             margin: 5px 0 22px;
@@ -230,8 +228,8 @@
             }
             45% {
                 transform: translateY(-18px) scale(1.05);
-                color: #ffb6c9;
-                text-shadow: 0 8px 30px rgba(255, 145, 179, 0.9), 0 0 20px rgba(255, 192, 209, 0.95);
+                color: #bfdbfe;
+                text-shadow: 0 8px 30px rgba(96, 165, 250, 0.9), 0 0 20px rgba(147, 197, 253, 0.95);
             }
             70% {
                 transform: translateY(-4px) scale(0.99, 1.01);
@@ -279,13 +277,13 @@
             font-weight: 700;
             line-height: 1;
             color: #ffffff;
-            text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
             padding: 0 4px;
         }
 
         .hero-address-preview {
             font-size: 0.95rem;
-            color: #d0d3da;
+            color: #cbd5e1;
             line-height: 1.7;
             font-weight: 400;
             letter-spacing: 0.5px;
@@ -300,7 +298,7 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: var(--blush-pink);
+            color: var(--neon-blue);
             opacity: 0.85;
             animation: bounceDown 2s infinite;
         }
@@ -315,16 +313,16 @@
             padding: 70px 24px;
             text-align: center;
             position: relative;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .section-title-script {
             font-family: 'Alex Brush', cursive;
             font-size: 3.8rem;
-            color: var(--blush-pink);
+            color: var(--neon-blue);
             margin-bottom: 8px;
             font-weight: 400;
-            text-shadow: 0 0 20px rgba(246, 216, 224, 0.35);
+            text-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
         }
 
         .section-subtitle-caps {
@@ -344,7 +342,7 @@
 
         .countdown-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-            border: 1px solid rgba(246, 216, 224, 0.3);
+            border: 1px solid rgba(96, 165, 250, 0.3);
             border-radius: 16px;
             padding: 20px 14px;
             min-width: 82px;
@@ -358,7 +356,7 @@
             display: block;
             font-size: 2.3rem;
             font-weight: 700;
-            background: linear-gradient(to bottom, #ffffff, #f6d8e0);
+            background: linear-gradient(to bottom, #ffffff, #93c5fd);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -367,87 +365,106 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #b8bec9;
+            color: #94a3b8;
             margin-top: 6px;
         }
 
-        .collage-grid {
+        .locations-grid {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-auto-rows: 130px;
-            gap: 12px;
+            grid-template-columns: 1fr;
+            gap: 20px;
             margin-top: 25px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .collage-item {
+        .location-luxury-card {
+            background: linear-gradient(155deg, rgba(20, 24, 34, 0.95), rgba(8, 10, 16, 0.98));
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 20px;
+            padding: 35px 22px;
+            text-align: center;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.1);
             position: relative;
-            border-radius: 14px;
             overflow: hidden;
-            border: 1.5px solid rgba(246, 216, 224, 0.35);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.75);
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
-            background: #14141c;
+            transition: transform 0.35s ease, border-color 0.35s ease;
         }
 
-        .collage-item:hover {
-            transform: scale(1.03) translateY(-4px);
-            border-color: var(--blush-pink);
-            z-index: 5;
+        .location-luxury-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--neon-blue);
         }
 
-        .collage-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease, filter 0.4s ease;
-        }
-
-        .collage-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .collage-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(5, 5, 7, 0.85) 0%, rgba(5, 5, 7, 0.1) 60%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 14px;
-            text-align: left;
-        }
-
-        .collage-tag {
+        .location-badge {
             display: inline-block;
-            font-size: 0.65rem;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.4);
+            color: var(--neon-blue);
+            font-size: 0.75rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #111;
-            background: var(--blush-pink);
-            padding: 3px 9px;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-weight: 600;
-            width: fit-content;
-            margin-bottom: 4px;
+            margin-bottom: 16px;
         }
 
-        .collage-caption {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            color: #fff;
-            font-style: italic;
+        .location-icon-circle {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #e2e8f0, #94a3b8);
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 0 25px rgba(96, 165, 250, 0.3);
         }
 
-        .c-span-7 { grid-column: span 7; grid-row: span 2; }
-        .c-span-5 { grid-column: span 5; grid-row: span 2; }
-        .c-span-4 { grid-column: span 4; grid-row: span 2; }
-        .c-span-8 { grid-column: span 8; grid-row: span 2; }
-        .c-span-6 { grid-column: span 6; grid-row: span 2; }
+        .location-luxury-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .location-address {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn-map-primary {
+            background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 60%, #94a3b8 100%);
+            color: #0b0b0e;
+            box-shadow: 0 6px 18px rgba(96, 165, 250, 0.25);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-map-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(96, 165, 250, 0.5);
+        }
 
         .bar-experience-card {
-            background: linear-gradient(135deg, rgba(22, 22, 30, 0.95), rgba(10, 10, 14, 0.98));
-            border: 1px solid rgba(246, 216, 224, 0.25);
+            background: linear-gradient(135deg, rgba(16, 20, 28, 0.95), rgba(8, 10, 14, 0.98));
+            border: 1px solid rgba(96, 165, 250, 0.25);
             border-radius: 20px;
             padding: 35px 24px;
             margin-top: 30px;
@@ -456,361 +473,33 @@
             overflow: hidden;
         }
 
-        .bar-drinks-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
-            margin: 28px 0;
-        }
-
         .drink-pill {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(246, 216, 224, 0.2);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             border-radius: 14px;
-            padding: 18px 12px;
+            padding: 22px 16px;
             transition: transform 0.3s ease, background 0.3s ease;
+            margin-top: 20px;
         }
 
         .drink-pill:hover {
             transform: translateY(-5px);
-            background: rgba(246, 216, 224, 0.08);
-            border-color: var(--blush-pink);
+            background: rgba(96, 165, 250, 0.08);
+            border-color: var(--neon-blue);
         }
 
         .drink-pill h4 {
             font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
-            color: var(--blush-pink);
-            margin: 10px 0 5px;
+            font-size: 1.1rem;
+            color: var(--neon-blue);
+            margin: 12px 0 8px;
+            letter-spacing: 1px;
         }
 
         .drink-pill p {
-            font-size: 0.8rem;
-            color: #b5bbc6;
-            line-height: 1.4;
-        }
-
-        .btn-silver {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 36px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, #ffffff 0%, #f6d8e0 50%, #c8ced8 100%);
-            color: #09090c;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(246, 216, 224, 0.35);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-silver:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 30px rgba(246, 216, 224, 0.6);
-        }
-
-        .gifts-blush-section {
-            background: linear-gradient(180deg, #f9e2e8 0%, #fceef2 50%, #f7dde5 100%);
-            color: var(--rose-wine);
-            padding: 75px 28px 85px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: inset 0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        .gold-filigree-top {
-            width: 100%;
-            max-width: 460px;
-            margin: 0 auto 35px;
-            display: block;
-        }
-
-        .gifts-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--rose-wine);
-            letter-spacing: 2px;
-            margin-bottom: 28px;
-        }
-
-        .gifts-subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--champagne-gold);
-            max-width: 440px;
-            margin: 0 auto 45px;
-            line-height: 1.75;
-            letter-spacing: 1px;
-        }
-
-        .gift-block-label {
-            font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
-            color: var(--rose-wine);
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .envelope-icon-wrap {
-            margin: 0 auto 45px;
-            width: 90px;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        .envelope-icon-wrap:hover {
-            transform: scale(1.08) rotate(-3deg);
-        }
-
-        .liverpool-logo-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin: 15px auto 22px;
-            color: #b54c68;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.85rem;
-            font-weight: 500;
-            letter-spacing: -0.5px;
-        }
-
-        .btn-mesa {
-            display: inline-block;
-            padding: 10px 26px;
-            border: 1.5px solid var(--champagne-gold);
-            border-radius: 6px;
-            color: var(--champagne-gold);
-            font-family: 'Cinzel', serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: underline;
-            letter-spacing: 1.5px;
-            background: rgba(255, 255, 255, 0.35);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-mesa:hover {
-            background: var(--rose-wine);
-            color: #fff;
-            border-color: var(--rose-wine);
-            text-decoration: none;
-        }
-
-        .botanical-corner-bl {
-            position: absolute;
-            bottom: -10px;
-            left: -10px;
-            width: 190px;
-            height: 260px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .rsvp-card {
-            background: linear-gradient(145deg, rgba(20, 20, 28, 0.95), rgba(8, 8, 12, 0.98));
-            border: 1px solid rgba(246, 216, 224, 0.35);
-            border-radius: 22px;
-            padding: 40px 26px;
-            max-width: 480px;
-            margin: 0 auto;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--blush-pink);
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 14px 16px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .form-input:focus {
-            border-color: var(--blush-pink);
-            box-shadow: 0 0 15px rgba(246, 216, 224, 0.25);
-        }
-
-        .form-input option {
-            background: #121218;
-            color: #fff;
-        }
-
-        /* Lightbox Modal for Collage */
-        #lightbox-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 2000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            backdrop-filter: blur(8px);
-        }
-
-        #lightbox-modal.active {
-            display: flex;
-        }
-
-        #lightbox-img {
-            max-width: 92%;
-            max-height: 82vh;
-            border-radius: 12px;
-            border: 2px solid var(--blush-pink);
-            box-shadow: 0 0 40px rgba(246, 216, 224, 0.3);
-        }
-
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .location-luxury-card {
-            background: linear-gradient(155deg, rgba(26, 26, 36, 0.95), rgba(10, 10, 15, 0.98));
-            border: 1px solid rgba(246, 216, 224, 0.3);
-            border-radius: 20px;
-            padding: 30px 22px;
-            text-align: center;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.35s ease, border-color 0.35s ease;
-        }
-
-        .location-luxury-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--blush-pink);
-        }
-
-        .location-badge {
-            display: inline-block;
-            background: rgba(246, 216, 224, 0.12);
-            border: 1px solid rgba(246, 216, 224, 0.4);
-            color: var(--blush-pink);
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 5px 14px;
-            border-radius: 20px;
-            margin-bottom: 14px;
-        }
-
-        .location-icon-circle {
-            width: 62px;
-            height: 62px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fff0f5, #d8b4c0);
-            color: #140d10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.7rem;
-            box-shadow: 0 0 25px rgba(246, 216, 224, 0.35);
-        }
-
-        .location-luxury-card h4 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
-            color: #ffffff;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-        }
-
-        .location-time {
             font-size: 0.88rem;
-            color: var(--blush-pink);
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-
-        .location-address {
-            font-size: 0.85rem;
-            color: #c2c7d2;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .map-buttons-row {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-map-small {
-            flex: 1;
-            min-width: 115px;
-            padding: 10px 14px;
-            border-radius: 25px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        .btn-map-primary {
-            background: linear-gradient(135deg, #ffffff 0%, #f6d8e0 60%, #d0d5df 100%);
-            color: #0b0b0e;
-            box-shadow: 0 6px 18px rgba(246, 216, 224, 0.3);
-        }
-
-        .btn-map-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 22px rgba(246, 216, 224, 0.55);
-        }
-
-        .btn-map-outline {
-            background: rgba(255, 255, 255, 0.04);
-            color: #ffffff;
-            border: 1px solid rgba(246, 216, 224, 0.4);
-        }
-
-        .btn-map-outline:hover {
-            background: rgba(246, 216, 224, 0.15);
-            border-color: var(--blush-pink);
+            color: #94a3b8;
+            line-height: 1.5;
         }
 
         .itinerary-timeline {
@@ -827,7 +516,7 @@
             bottom: 0;
             left: 50%;
             width: 2px;
-            background: linear-gradient(180deg, transparent, var(--blush-pink) 15%, #ffffff 50%, var(--blush-pink) 85%, transparent);
+            background: linear-gradient(180deg, transparent, var(--neon-blue) 15%, #ffffff 50%, var(--neon-blue) 85%, transparent);
             transform: translateX(-50%);
             opacity: 0.55;
         }
@@ -839,15 +528,8 @@
             box-sizing: border-box;
         }
 
-        .itinerary-step.left {
-            left: 0;
-            text-align: right;
-        }
-
-        .itinerary-step.right {
-            left: 50%;
-            text-align: left;
-        }
+        .itinerary-step.left { left: 0; text-align: right; }
+        .itinerary-step.right { left: 50%; text-align: left; }
 
         .itinerary-dot {
             position: absolute;
@@ -855,23 +537,18 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background: var(--blush-pink);
+            background: var(--neon-blue);
             border: 3px solid #050507;
-            box-shadow: 0 0 15px rgba(246, 216, 224, 0.9);
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.8);
             z-index: 2;
         }
 
-        .itinerary-step.left .itinerary-dot {
-            right: -8px;
-        }
-
-        .itinerary-step.right .itinerary-dot {
-            left: -8px;
-        }
+        .itinerary-step.left .itinerary-dot { right: -8px; }
+        .itinerary-step.right .itinerary-dot { left: -8px; }
 
         .itinerary-box {
             background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
-            border: 1px solid rgba(246, 216, 224, 0.25);
+            border: 1px solid rgba(96, 165, 250, 0.25);
             border-radius: 16px;
             padding: 16px 18px;
             backdrop-filter: blur(8px);
@@ -881,7 +558,7 @@
 
         .itinerary-box:hover {
             transform: translateY(-4px);
-            border-color: var(--blush-pink);
+            border-color: var(--neon-blue);
         }
 
         .itinerary-hour {
@@ -890,7 +567,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             color: #09090c;
-            background: var(--blush-pink);
+            background: var(--neon-blue);
             padding: 3px 10px;
             border-radius: 12px;
             margin-bottom: 8px;
@@ -906,13 +583,81 @@
 
         .itinerary-box p {
             font-size: 0.8rem;
-            color: #b8bec9;
+            color: #94a3b8;
             line-height: 1.45;
         }
 
+        .gifts-blue-section {
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 50%, #020617 100%);
+            color: #e2e8f0;
+            padding: 75px 28px 85px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 10px 30px rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(96, 165, 250, 0.2);
+            border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        .gifts-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+        }
+
+        .gifts-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #94a3b8;
+            max-width: 480px;
+            margin: 0 auto 40px;
+            line-height: 1.75;
+            letter-spacing: 0.5px;
+        }
+
+        .gift-box-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 16px;
+            padding: 30px 20px;
+            max-width: 400px;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .gift-block-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--neon-blue);
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .bank-details {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            line-height: 1.8;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid var(--neon-blue);
+            text-align: left;
+        }
+
+        .bank-details strong {
+            color: #ffffff;
+        }
+
         .wishes-composer-card {
-            background: linear-gradient(145deg, rgba(24, 24, 34, 0.95), rgba(10, 10, 15, 0.98));
-            border: 1px solid rgba(246, 216, 224, 0.3);
+            background: linear-gradient(145deg, rgba(20, 24, 34, 0.95), rgba(8, 10, 16, 0.98));
+            border: 1px solid rgba(96, 165, 250, 0.3);
             border-radius: 20px;
             padding: 28px 22px;
             max-width: 500px;
@@ -930,8 +675,8 @@
 
         .vibe-chip {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(246, 216, 224, 0.25);
-            color: #d8dce3;
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            color: #cbd5e1;
             padding: 7px 13px;
             border-radius: 20px;
             font-size: 0.78rem;
@@ -941,11 +686,11 @@
         }
 
         .vibe-chip.active, .vibe-chip:hover {
-            background: var(--blush-pink);
-            color: #09090c;
+            background: var(--neon-blue);
+            color: #0f172a;
             border-color: #ffffff;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(246, 216, 224, 0.45);
+            font-weight: 700;
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.45);
         }
 
         .wishes-wall-list {
@@ -959,18 +704,12 @@
             padding-right: 6px;
         }
 
-        .wishes-wall-list::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .wishes-wall-list::-webkit-scrollbar-thumb {
-            background: rgba(246, 216, 224, 0.35);
-            border-radius: 10px;
-        }
+        .wishes-wall-list::-webkit-scrollbar { width: 5px; }
+        .wishes-wall-list::-webkit-scrollbar-thumb { background: rgba(96, 165, 250, 0.35); border-radius: 10px; }
 
         .wish-item-card {
             background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(246, 216, 224, 0.2);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             border-radius: 16px;
             padding: 18px 20px;
             text-align: left;
@@ -979,9 +718,7 @@
             transition: border-color 0.3s ease;
         }
 
-        .wish-item-card:hover {
-            border-color: rgba(246, 216, 224, 0.55);
-        }
+        .wish-item-card:hover { border-color: rgba(96, 165, 250, 0.55); }
 
         @keyframes fadeInWish {
             0% { opacity: 0; transform: translateY(-10px) scale(0.98); }
@@ -1005,16 +742,16 @@
 
         .wish-badge {
             font-size: 0.7rem;
-            background: rgba(246, 216, 224, 0.15);
-            color: var(--blush-pink);
+            background: rgba(96, 165, 250, 0.15);
+            color: var(--neon-blue);
             padding: 3px 10px;
             border-radius: 12px;
-            border: 1px solid rgba(246, 216, 224, 0.3);
+            border: 1px solid rgba(96, 165, 250, 0.3);
         }
 
         .wish-message {
             font-size: 0.88rem;
-            color: #d4d8e1;
+            color: #cbd5e1;
             line-height: 1.55;
             margin-bottom: 12px;
             font-style: italic;
@@ -1030,8 +767,8 @@
 
         .wish-like-btn {
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(246, 216, 224, 0.25);
-            color: var(--blush-pink);
+            border: 1px solid rgba(96, 165, 250, 0.25);
+            color: var(--neon-blue);
             padding: 4px 11px;
             border-radius: 15px;
             font-size: 0.75rem;
@@ -1043,20 +780,47 @@
         }
 
         .wish-like-btn:hover, .wish-like-btn.liked {
-            background: rgba(246, 216, 224, 0.22);
-            border-color: var(--blush-pink);
+            background: rgba(96, 165, 250, 0.22);
+            border-color: #ffffff;
             transform: scale(1.06);
         }
 
+        .rsvp-card {
+            background: linear-gradient(145deg, rgba(20, 24, 34, 0.95), rgba(8, 10, 16, 0.98));
+            border: 1px solid rgba(96, 165, 250, 0.35);
+            border-radius: 22px;
+            padding: 40px 26px;
+            max-width: 480px;
+            margin: 0 auto;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+        }
+
+        .form-group { margin-bottom: 18px; text-align: left; }
+        .form-group label {
+            display: block; font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--neon-blue); margin-bottom: 8px; font-weight: 600;
+        }
+        .form-input {
+            width: 100%; padding: 14px 16px; border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05);
+            color: #fff; font-family: 'Montserrat', sans-serif; font-size: 0.95rem;
+            outline: none; transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-input:focus { border-color: var(--neon-blue); box-shadow: 0 0 15px rgba(96, 165, 250, 0.25); }
+        .form-input option { background: #121218; color: #fff; }
+
+        .btn-silver {
+            display: inline-block; padding: 14px 36px; border-radius: 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 50%, #94a3b8 100%);
+            color: #0b0b0e; font-weight: 700; font-size: 0.85rem; letter-spacing: 2px;
+            text-transform: uppercase; text-decoration: none;
+            box-shadow: 0 8px 25px rgba(96, 165, 250, 0.35); transition: all 0.3s ease;
+            border: none; cursor: pointer;
+        }
+        .btn-silver:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 30px rgba(96, 165, 250, 0.6); }
+
         @media (max-width: 580px) {
-            .c-span-7, .c-span-5, .c-span-4, .c-span-8, .c-span-6 {
-                grid-column: span 6;
-                grid-row: span 2;
-            }
-            .collage-item.featured-wide {
-                grid-column: span 12;
-            }
-            .hero-name { font-size: 5.2rem; }
+            .hero-name { font-size: 5.5rem; }
             .date-center-num { font-size: 3.4rem; }
             .date-side { font-size: 0.8rem; letter-spacing: 1.5px; }
             .itinerary-timeline::before { left: 22px; }
@@ -1067,60 +831,50 @@
 </head>
 <body>
 
-    <!-- Misma canción que empieza en el segundo 55 al primer toque o scroll -->
     <audio id="bg-music" loop preload="auto">
         <source src="micancionxv.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Botón flotante de música -->
     <div class="music-control" id="music-btn" onclick="toggleMusic()" title="Música de fondo">
         <div class="music-waves">
             <span></span><span></span><span></span><span></span>
         </div>
     </div>
 
-    <!-- Lienzo de destellos nocturnos (Stardust) -->
+    <!-- Stardust y Globos Azules -->
     <canvas id="stardust-canvas"></canvas>
-
-    <!-- Contenedor de Globos Rosa Claro subiendo por los lados -->
     <div id="side-balloons-container"></div>
-
-    <!-- Modal para ver fotos del collage en grande -->
-    <div id="lightbox-modal" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Vista previa">
-    </div>
 
     <div class="main-wrapper">
         
         <section class="hero-section">
             <h2 class="script-top">Celebremos mis</h2>
 
-            <!-- Globo Metálico 3D "23" en SVG de alta definición (Tócalo para lanzar destellos) -->
-            <div class="foil-23-container" onclick="triggerCelebrationBurst()" title="¡Toca para celebrar!">
+            <!-- Globo 15 Metálico Azul/Plata -->
+            <div class="foil-15-container" onclick="triggerCelebrationBurst()" title="¡Toca para celebrar!">
                 <svg viewBox="0 0 360 250" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <!-- Degradado Metálico Efecto Globo Inflado que cambia entre Plateado y Rosita -->
                         <linearGradient id="silverFoil" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" stop-color="#ffffff">
-                                <animate attributeName="stop-color" values="#ffffff;#fff0f5;#ffffff" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#ffffff;#e6f0ff;#ffffff" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="18%" stop-color="#d5d9e2">
-                                <animate attributeName="stop-color" values="#d5d9e2;#f8bbd0;#d5d9e2" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#d5d9e2;#bad4ff;#d5d9e2" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="35%" stop-color="#8b929e">
-                                <animate attributeName="stop-color" values="#8b929e;#d47a96;#8b929e" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#8b929e;#7ba1e3;#8b929e" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="50%" stop-color="#ffffff">
-                                <animate attributeName="stop-color" values="#ffffff;#ffe4ec;#ffffff" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#ffffff;#e6f0ff;#ffffff" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="68%" stop-color="#aeb5c2">
-                                <animate attributeName="stop-color" values="#aeb5c2;#f498b5;#aeb5c2" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#aeb5c2;#9bbdf0;#aeb5c2" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="85%" stop-color="#6e7480">
-                                <animate attributeName="stop-color" values="#6e7480;#b55d78;#6e7480" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#6e7480;#5a8dd4;#6e7480" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                             <stop offset="100%" stop-color="#f3f5f8">
-                                <animate attributeName="stop-color" values="#f3f5f8;#ffd6e4;#f3f5f8" dur="2.4s" repeatCount="indefinite"/>
+                                <animate attributeName="stop-color" values="#f3f5f8;#dce8ff;#f3f5f8" dur="2.4s" repeatCount="indefinite"/>
                             </stop>
                         </linearGradient>
                         <linearGradient id="foilHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -1138,40 +892,33 @@
                         </filter>
                     </defs>
                     
-                    <!-- Números "23" estilo globo inflado metálico con pliegues -->
                     <g filter="url(#balloonBevel)">
                         <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="url(#silverFoil)" stroke="#e2e6ee" stroke-width="5" stroke-linejoin="round" letter-spacing="-10">
-                            23
-                            <animate attributeName="stroke" values="#e2e6ee;#ffc2d4;#e2e6ee" dur="2.4s" repeatCount="indefinite"/>
+                            15
+                            <animate attributeName="stroke" values="#e2e6ee;#c2d4ff;#e2e6ee" dur="2.4s" repeatCount="indefinite"/>
                         </text>
-                        <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="none" stroke="url(#foilHighlight)" stroke-width="8" stroke-dasharray="18 10" letter-spacing="-10" opacity="0.65">23</text>
+                        <text x="178" y="198" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="800" font-size="195" fill="none" stroke="url(#foilHighlight)" stroke-width="8" stroke-dasharray="18 10" letter-spacing="-10" opacity="0.65">15</text>
                     </g>
                     <!-- Destellos estrella sobre el globo -->
                     <path d="M95 55 L98 68 L111 71 L98 74 L95 87 L92 74 L79 71 L92 68 Z" fill="#ffffff" opacity="0.9">
                         <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
                     </path>
-                    <path d="M265 115 L267 124 L276 126 L267 128 L265 137 L263 128 L254 126 L263 124 Z" fill="#fceef2" opacity="0.9">
+                    <path d="M265 115 L267 124 L276 126 L267 128 L265 137 L263 128 L254 126 L263 124 Z" fill="#eef4fc" opacity="0.9">
                         <animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/>
                     </path>
                 </svg>
             </div>
 
-            <h1 class="hero-name">Olivia</h1>
+            <h1 class="hero-name">Arturo</h1>
 
             <p class="hero-quote">
-                Una noche para soñar, reír y<br>brillar con quienes más quiero.
+                Una gran noche para festejar, compartir<br>y crear nuevos recuerdos.
             </p>
 
-            <!-- Bloque de Fecha Exacto -->
             <div class="date-banner">
-                <div class="date-side">OCTUBRE</div>
-                <div class="date-center-num">30</div>
-                <div class="date-side">04:00 P.M.</div>
-            </div>
-
-            <div class="hero-address-preview">
-                <p>Calle Cualquiera 12, #12-34</p>
-                <p>Confirmar asistencia: (55) 1234-5678</p>
+                <div class="date-side">NOVIEMBRE</div>
+                <div class="date-center-num">28</div>
+                <div class="date-side">05:00 P.M.</div>
             </div>
 
             <div class="scroll-indicator">
@@ -1184,7 +931,7 @@
 
         <section class="section-dark">
             <h3 class="section-title-script">Cuenta Regresiva</h3>
-            <p class="section-subtitle-caps">Para la noche más brillante</p>
+            <p class="section-subtitle-caps">El tiempo corre para la fiesta</p>
 
             <div class="countdown-grid" id="countdown">
                 <div class="countdown-card"><span id="days">00</span><p>Días</p></div>
@@ -1195,167 +942,73 @@
         </section>
 
         <section class="section-dark">
-            <h3 class="section-title-script">Vibes &amp; Momentos</h3>
-            <p class="section-subtitle-caps">Un vistazo a nuestra celebración • Toca cualquier foto</p>
-
-            <div class="collage-grid">
-                <!-- Foto 1: Retrato / Cumpleañera -->
-                <div class="collage-item c-span-7 featured-wide" onclick="openLightbox(this)">
-                    <img src="foto1xv.jpeg" onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=80'" alt="Olivia Birthday">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">Birthday Girl</span>
-                        <span class="collage-caption">Brillando en mis 23 ✨</span>
-                    </div>
-                </div>
-
-                <!-- Foto 2: Mixología & Bar -->
-                <div class="collage-item c-span-5" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cocktail Bar">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">Mixología</span>
-                        <span class="collage-caption">Signature Drinks</span>
-                    </div>
-                </div>
-
-                <!-- Foto 3: Brindis con amigas -->
-                <div class="collage-item c-span-5" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=800&q=80" alt="Brindis">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">Cheers</span>
-                        <span class="collage-caption">Champagne &amp; Risas</span>
-                    </div>
-                </div>
-
-                <!-- Foto 4: Ambiente del Bar / Lounge -->
-                <div class="collage-item c-span-7 featured-wide" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=900&q=80" alt="Nightclub Bar">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">The Venue</span>
-                        <span class="collage-caption">Terraza &amp; Lounge Exclusivo</span>
-                    </div>
-                </div>
-
-                <!-- Foto 5: DJ & Fiesta -->
-                <div class="collage-item c-span-6" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=800&q=80" alt="Party Vibes">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">Music &amp; DJ</span>
-                        <span class="collage-caption">Bailar hasta el amanecer</span>
-                    </div>
-                </div>
-
-                <!-- Foto 6: Detalles & Globos -->
-                <div class="collage-item c-span-6" onclick="openLightbox(this)">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Glamour">
-                    <div class="collage-overlay">
-                        <span class="collage-tag">Glamour</span>
-                        <span class="collage-caption">Noche Inolvidable</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-dark">
-            <h3 class="section-title-script">Ubicaciones</h3>
+            <h3 class="section-title-script">Ubicación</h3>
             <p class="section-subtitle-caps">Dónde nos vemos para celebrar</p>
 
             <div class="locations-grid">
-                <!-- Ubicación 1: Pre-Drinks / Terraza (Ficticia de muestra) -->
                 <div class="location-luxury-card">
-                    <span class="location-badge">1ª Parada • Sunset</span>
-                    <div class="location-icon-circle">🥂</div>
-                    <h4>AURA ROOFTOP GARDEN</h4>
-                    <p class="location-time">RECEPCIÓN • 04:00 P.M.</p>
-                    <p class="location-address">
-                        Av. Paseo de las Palmas #780, Piso 14<br>
-                        Col. Lomas Exclusivas (Ubicación Muestra)<br>
-                        <span style="color: var(--blush-pink); font-size: 0.78rem;">✨ Valet Parking Disponible</span>
-                    </p>
-                    <div class="map-buttons-row">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Rooftop+Lounge+CDMX" target="_blank" class="btn-map-small btn-map-primary">
-                            📍 Google Maps
-                        </a>
-                        <a href="https://waze.com/ul?q=Rooftop%20Lounge" target="_blank" class="btn-map-small btn-map-outline">
-                            🚗 Waze
-                        </a>
+                    <span class="location-badge">El Gran Evento</span>
+                    <div class="location-icon-circle">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                </div>
-
-                <!-- Ubicación 2: Fiesta Principal / Nightclub (Ficticia de muestra) -->
-                <div class="location-luxury-card">
-                    <span class="location-badge">2ª Parada • Main Party</span>
-                    <div class="location-icon-circle">🪩</div>
-                    <h4>VELVET SKY BAR &amp; CLUB</h4>
-                    <p class="location-time">NIGHT PARTY • 08:30 P.M.</p>
+                    <h4>JARDÍN LOS LAURELES</h4>
                     <p class="location-address">
-                        Calle Cualquiera 12, #12-34, Zona VIP<br>
-                        Acceso directo en lista de ”Olivia 23”<br>
-                        <span style="color: var(--blush-pink); font-size: 0.78rem;">✨ Área Lounge Reservada</span>
+                        Te espero para celebrar juntos mis 15 años en este increíble lugar.<br><br>
+                        <span style="color: var(--neon-blue); font-size: 0.8rem;">Clic en el botón para ver la ruta exacta.</span>
                     </p>
-                    <div class="map-buttons-row">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Velvet+Bar+Lounge" target="_blank" class="btn-map-small btn-map-primary">
-                            📍 Google Maps
-                        </a>
-                        <a href="https://waze.com/ul?q=Velvet%20Bar%20Lounge" target="_blank" class="btn-map-small btn-map-outline">
-                            🚗 Waze
-                        </a>
-                    </div>
+                    <a href="https://maps.app.goo.gl/W19PtcP5MSx1uhZJ9" target="_blank" class="btn-map-primary" style="width: 100%;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg> Abrir en Google Maps
+                    </a>
                 </div>
             </div>
 
             <div class="bar-experience-card">
-                <h4 style="font-family: 'Cinzel', serif; font-size: 1.35rem; color: #fff; letter-spacing: 2px;">EXPERIENCIA VIP &amp; DRESS CODE</h4>
-                <p style="color: var(--blush-pink); font-size: 0.88rem; margin-top: 6px; letter-spacing: 1px;">Preparados para una velada espectacular</p>
+                <h4 style="font-family: 'Cinzel', serif; font-size: 1.35rem; color: #fff; letter-spacing: 2px;">DRESS CODE</h4>
+                <p style="color: var(--neon-blue); font-size: 0.88rem; margin-top: 6px; letter-spacing: 1px;">Prepara tu mejor outfit</p>
 
-                <div class="bar-drinks-row">
-                    <div class="drink-pill">
-                        <div style="font-size: 1.8rem;">🍸</div>
-                        <h4>Pink 23 Martini</h4>
-                        <p>Coctel de bienvenida con frutos rojos y toque de glitter perlado.</p>
+                <div class="drink-pill">
+                    <div style="margin-bottom: 10px;">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="1.5"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
                     </div>
-                    <div class="drink-pill">
-                        <div style="font-size: 1.8rem;">🥂</div>
-                        <h4>Barra &amp; Tapas</h4>
-                        <p>Mixología de autor, shots de medianoche y bocadillos gourmet.</p>
-                    </div>
-                    <div class="drink-pill">
-                        <div style="font-size: 1.8rem;">✨</div>
-                        <h4>Dress Code</h4>
-                        <p><strong>Cocktail Chic:</strong> Negro, Plata o tonos Nude/Rosa.</p>
-                    </div>
+                    <h4 style="font-size: 1.4rem;">All Black Everything</h4>
+                    <p style="font-size: 0.95rem; margin-top: 10px;">
+                        <strong>Modo Men in Black / Elegancia Oscura.</strong><br>
+                        La temática de la noche es 100% vestimenta color negro. 
+                        Prepara tu outfit más cool, elegante, pero listo para disfrutar de la fiesta.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="section-dark">
             <h3 class="section-title-script">Itinerario</h3>
-            <p class="section-subtitle-caps">Minuto a minuto de nuestra celebración</p>
+            <p class="section-subtitle-caps">Minuto a minuto de la celebración</p>
 
             <div class="itinerary-timeline">
                 <div class="itinerary-step left">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">04:00 P.M.</span>
-                        <h4>🍸 Welcome Drink &amp; Recepción</h4>
-                        <p>Llegada a la terraza, coctel de bienvenida perlado y primeras fotos en el spot de globos.</p>
+                        <span class="itinerary-hour">05:00 P.M.</span>
+                        <h4>Recepción</h4>
+                        <p>Llegada al lugar, bienvenida y primeras fotos con los invitados.</p>
                     </div>
                 </div>
 
                 <div class="itinerary-step right">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">05:30 P.M.</span>
-                        <h4>🌅 Sunset Tapas &amp; Mixología</h4>
-                        <p>Degustación de bocadillos gourmet, barra de gin &amp; carajillos mientras cae el atardecer.</p>
+                        <span class="itinerary-hour">06:30 P.M.</span>
+                        <h4>Cena</h4>
+                        <p>Momento de tomar asiento para disfrutar del banquete preparado.</p>
                     </div>
                 </div>
 
                 <div class="itinerary-step left">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">07:30 P.M.</span>
-                        <h4>🎂 Brindis &amp; Pastel 23</h4>
-                        <p>Chispas frías, palabras de mejores amigas, deseos de cumpleaños y partida de pastel.</p>
+                        <span class="itinerary-hour">08:00 P.M.</span>
+                        <h4>Brindis & Sorpresa</h4>
+                        <p>Palabras de agradecimiento y el momento más importante de la noche.</p>
                     </div>
                 </div>
 
@@ -1363,8 +1016,8 @@
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
                         <span class="itinerary-hour">09:00 P.M.</span>
-                        <h4>🎧 DJ Set &amp; Pista Abierta</h4>
-                        <p>Se encienden las luces del club, props luminosos y los mejores hits para bailar toda la noche.</p>
+                        <h4>¡A romper la pista!</h4>
+                        <p>Se apagan las luces, sube la música y abrimos la pista con el DJ Set.</p>
                     </div>
                 </div>
 
@@ -1372,149 +1025,97 @@
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
                         <span class="itinerary-hour">12:00 A.M.</span>
-                        <h4>🔥 Midnight Shots &amp; After</h4>
-                        <p>Ronda de shots sorpresa, chilaquiles de trasnoche y fiesta hasta que el cuerpo aguante.</p>
+                        <h4>Tornafiesta</h4>
+                        <p>Snacks de trasnoche para recuperar energía y seguir festejando.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="gifts-blush-section">
-            <!-- Ornamento superior dorado estilo arabesco idéntico a la imagen 2 -->
-            <svg class="gold-filigree-top" viewBox="0 0 500 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="15" y1="38" x2="485" y2="38" stroke="#c5a367" stroke-width="1.2"/>
-                <line x1="40" y1="42" x2="460" y2="42" stroke="#c5a367" stroke-width="0.7"/>
-                <circle cx="15" cy="38" r="2.5" fill="#c5a367"/>
-                <circle cx="485" cy="38" r="2.5" fill="#c5a367"/>
-                <!-- Arabesco central -->
-                <path d="M250 10 C245 25, 230 38, 215 38 C205 38, 200 30, 208 25 C215 20, 222 30, 214 34" stroke="#c5a367" stroke-width="1.5" fill="none"/>
-                <path d="M250 10 C255 25, 270 38, 285 38 C295 38, 300 30, 292 25 C285 20, 278 30, 286 34" stroke="#c5a367" stroke-width="1.5" fill="none"/>
-                <circle cx="250" cy="8" r="3" fill="#c5a367"/>
-            </svg>
-
-            <h3 class="gifts-title">OPCIONES DE REGALO</h3>
-
+        <section class="gifts-blue-section">
+            <h3 class="gifts-title">SUGERENCIA DE REGALO</h3>
             <p class="gifts-subtitle">
-                MI MEJOR REGALO ES COMPARTIR CONTIGO<br>
-                ESTE GRAN DÍA... SIN EMBARGO, SI DESEAS<br>
-                OBSEQUIARME ALGO PUEDO SUGERIR:
+                Tu presencia es mi mejor regalo para celebrar este gran día. Sin embargo, si deseas tener un detalle conmigo, te comparto la siguiente opción:
             </p>
 
-            <h4 class="gift-block-label">LLUVIA DE SOBRES</h4>
+            <div class="gift-box-card">
+                <h4 class="gift-block-label">Lluvia de Sobres / Transferencia</h4>
+                
+                <div style="margin: 15px 0;">
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="1.2"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><path d="M2 4l10 8 10-8"></path></svg>
+                </div>
+                <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 15px;">
+                    Habrá un buzón en la recepción para depositar tus sobres, o si prefieres, puedes realizar una transferencia directa:
+                </p>
 
-            <!-- Ícono de Sobre con signo $ exacto al diseño rosa -->
-            <div class="envelope-icon-wrap">
-                <svg viewBox="0 0 100 90" width="85" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Cuerpo del sobre -->
-                    <path d="M12 32 L50 8 L88 32 L88 80 C88 82 86 84 84 84 L16 84 C14 84 12 82 12 80 Z" stroke="#a9405b" stroke-width="2.6" stroke-linejoin="round"/>
-                    <!-- Tarjeta interior -->
-                    <path d="M24 44 L24 22 L76 22 L76 44" stroke="#a9405b" stroke-width="2.4" stroke-linejoin="round"/>
-                    <!-- Solapas del sobre -->
-                    <path d="M12 32 L50 58 L88 32" stroke="#a9405b" stroke-width="2.6" stroke-linejoin="round"/>
-                    <path d="M12 82 L40 52" stroke="#a9405b" stroke-width="2.6"/>
-                    <path d="M88 82 L60 52" stroke="#a9405b" stroke-width="2.6"/>
-                    <!-- Moneda con signo $ -->
-                    <circle cx="50" cy="36" r="10" stroke="#a9405b" stroke-width="2.2"/>
-                    <text x="50" y="41" text-anchor="middle" fill="#a9405b" font-family="'Montserrat', sans-serif" font-weight="700" font-size="14">$</text>
-                </svg>
+                <div class="bank-details">
+                    <p>Banco: <strong>BBVA México</strong></p>
+                    <p>Cuenta: <strong>1554818074</strong></p>
+                    <p>CLABE: <strong>012180015548180741</strong></p>
+                </div>
             </div>
-
-            <h4 class="gift-block-label" style="margin-bottom: 10px;">MESA DE REGALO</h4>
-
-            <!-- Logo Liverpool estilizado -->
-            <div class="liverpool-logo-wrap">
-                <svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="2" width="32" height="32" fill="#e8b7c4" opacity="0.5"/>
-                    <path d="M6 6 V30 H30 M11 6 V25 H30 M16 6 V20 H30" stroke="#a9405b" stroke-width="2.4"/>
-                </svg>
-                <span>Liverpool</span>
-            </div>
-
-            <a href="https://mesaderegalos.liverpool.com.mx/" target="_blank" class="btn-mesa">IR A MESA</a>
-
-            <!-- Ramas botánicas acuarela rosa y líneas doradas en la esquina inferior izquierda -->
-            <svg class="botanical-corner-bl" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Hojas acuarela rosa -->
-                <path d="M-10 260 Q40 200 85 150 Q50 150 25 180 Z" fill="#e598ad" opacity="0.55"/>
-                <path d="M25 190 Q15 140 45 110 Q65 140 35 185 Z" fill="#dc839c" opacity="0.6"/>
-                <path d="M45 210 Q95 170 120 190 Q85 225 45 210 Z" fill="#eab3c3" opacity="0.65"/>
-                <path d="M10 230 Q60 220 90 245 Q45 260 10 230 Z" fill="#d4728d" opacity="0.5"/>
-                <!-- Ramas en línea dorada fina -->
-                <path d="M-5 265 Q45 190 115 95" stroke="#b89758" stroke-width="1.4" fill="none"/>
-                <path d="M55 175 Q45 125 65 85 Q85 125 55 175 Z" stroke="#b89758" stroke-width="1.2" fill="none"/>
-                <path d="M78 145 Q115 115 145 125 Q115 155 78 145 Z" stroke="#b89758" stroke-width="1.2" fill="none"/>
-                <path d="M35 205 Q10 165 20 130 Q50 160 35 205 Z" stroke="#b89758" stroke-width="1.2" fill="none"/>
-                <path d="M95 120 Q95 75 118 50 Q130 85 95 120 Z" stroke="#b89758" stroke-width="1.2" fill="none"/>
-            </svg>
         </section>
 
         <section class="section-dark" id="wishes-section">
-            <h3 class="section-title-script">Muro de Buenos Deseos</h3>
-            <p class="section-subtitle-caps">Déjale un mensaje especial a Olivia por sus 23</p>
+            <h3 class="section-title-script">Buenos Deseos</h3>
+            <p class="section-subtitle-caps">Déjale un mensaje a Arturo por sus 15</p>
 
             <div class="wishes-composer-card">
                 <form id="wish-form">
                     <div class="form-group">
-                        <label for="wish-name">Tu Nombre o Apodo</label>
-                        <input type="text" id="wish-name" class="form-input" placeholder="Ej. Vale &amp; Fer" required>
+                        <label for="wish-name">Tu Nombre</label>
+                        <input type="text" id="wish-name" class="form-input" placeholder="Ej. Familia Rodríguez" required>
                     </div>
 
                     <div class="form-group">
                         <label>Elige tu Vibe para la fiesta</label>
                         <div class="vibe-selector" id="vibe-selector">
-                            <span class="vibe-chip active" onclick="selectVibe(this, '🥂 ¡A brindar!')">🥂 ¡A brindar!</span>
-                            <span class="vibe-chip" onclick="selectVibe(this, '👑 Queen 23')">👑 Queen 23</span>
-                            <span class="vibe-chip" onclick="selectVibe(this, '💖 Te adoro')">💖 Te adoro</span>
-                            <span class="vibe-chip" onclick="selectVibe(this, '🔥 A romper la pista')">🔥 A romper la pista</span>
+                            <span class="vibe-chip active" onclick="selectVibe(this, 'Fachero')">Fachero</span>
+                            <span class="vibe-chip" onclick="selectVibe(this, '¡Felicidades!')">¡Felicidades!</span>
+                            <span class="vibe-chip" onclick="selectVibe(this, 'Modo Fiesta')">Modo Fiesta</span>
+                            <span class="vibe-chip" onclick="selectVibe(this, 'A romper la pista')">A romper la pista</span>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="wish-text">Tu Mensaje</label>
-                        <textarea id="wish-text" class="form-input" rows="3" placeholder="Escribe tus mejores deseos para esta noche mágica..." required style="resize: none;"></textarea>
+                        <textarea id="wish-text" class="form-input" rows="3" placeholder="Escribe aquí tu mensaje de felicitación..." required style="resize: none;"></textarea>
                     </div>
 
                     <button type="submit" class="btn-silver" style="width: 100%; margin-top: 5px;">
-                        💌 Publicar en el Muro
+                        Publicar en el Muro
                     </button>
                 </form>
             </div>
 
-            <!-- Lista interactiva con deseos de muestra para deslumbrar al cliente -->
             <div class="wishes-wall-list" id="wishes-wall-list">
                 <div class="wish-item-card">
                     <div class="wish-header">
-                        <span class="wish-author">Camila &amp; Dani</span>
-                        <span class="wish-badge">👑 Queen 23</span>
+                        <span class="wish-author">Los Primos</span>
+                        <span class="wish-badge">A romper la pista</span>
                     </div>
-                    <p class="wish-message">"¡Amiga hermosa! Que estos 23 vengan llenos de viajes, éxito y noches inolvidables. ¡Ya listas para brindar contigo!"</p>
+                    <p class="wish-message">"¡Felices 15, Arturo! Ya listos con todo el outfit negro para festejar en grande y desvelarnos."</p>
                     <div class="wish-footer">
                         <span>Hace unos momentos</span>
-                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">❤️ <span>14</span></button>
+                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                            <span>12</span>
+                        </button>
                     </div>
                 </div>
 
                 <div class="wish-item-card">
                     <div class="wish-header">
-                        <span class="wish-author">Sebastián M.</span>
-                        <span class="wish-badge">🥂 ¡A brindar!</span>
+                        <span class="wish-author">Tíos Juan y Silvia</span>
+                        <span class="wish-badge">¡Felicidades!</span>
                     </div>
-                    <p class="wish-message">"¡Muchas felicidades Oli! Prepárense porque hoy se festeja en grande en el rooftop. ¡Nos vemos a las 4!"</p>
+                    <p class="wish-message">"Arturo, que tengas un cumpleaños increíble lleno de diversión. Nos da mucho gusto verte crecer, un abrazo enorme."</p>
                     <div class="wish-footer">
-                        <span>Hace 12 min</span>
-                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">❤️ <span>9</span></button>
-                    </div>
-                </div>
-
-                <div class="wish-item-card">
-                    <div class="wish-header">
-                        <span class="wish-author">Tía Mariana y Familia</span>
-                        <span class="wish-badge">💖 Te adoro</span>
-                    </div>
-                    <p class="wish-message">"Que sigas brillando tan bonito siempre, mi niña. Te deseamos un cumpleaños mágico rodeada de quienes te amamos."</p>
-                    <div class="wish-footer">
-                        <span>Hace 1 hora</span>
-                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">❤️ <span>19</span></button>
+                        <span>Hace 1 hr</span>
+                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                            <span>5</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1522,51 +1123,60 @@
 
         <section class="section-dark" id="rsvp-section">
             <h3 class="section-title-script">Confirmar Asistencia</h3>
-            <p class="section-subtitle-caps">Reserva tu lugar en la lista VIP</p>
+            <p class="section-subtitle-caps">Asegura tu lugar en la lista</p>
 
             <div class="rsvp-card">
-                <form id="rsvp-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="Nombre" class="form-input" placeholder="Ej. Sofía Hernández" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono / WhatsApp</label>
-                        <input type="tel" id="telefono" name="Telefono" class="form-input" placeholder="Ej. 55 1234 5678" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="boletos">Personas Confirmadas</label>
-                        <select id="boletos" name="Boletos" class="form-input" required>
-                            <option value="" disabled selected>Selecciona cantidad de lugares</option>
-                            <option value="1">1 Persona</option>
-                            <option value="2">2 Personas</option>
-                            <option value="3">3 Personas</option>
-                            <option value="4">4 Personas</option>
-                        </select>
-                    </div>
+                <button type="button" class="btn-silver" id="reveal-rsvp-btn" style="width: 100%;" onclick="document.getElementById('rsvp-form-container').style.display='block'; this.style.display='none';">
+                    Confirmar Ahora
+                </button>
 
-                    <button type="submit" class="btn-silver" id="submit-btn" style="width: 100%; margin-top: 10px;">
-                        ✨ Confirmar en Lista Oficial
-                    </button>
-                </form>
+                <div id="rsvp-form-container" style="display: none;">
+                    <form id="rsvp-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="Nombre" class="form-input" placeholder="Ej. Roberto Sánchez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asiste">¿Asistirás al evento?</label>
+                            <select id="asiste" name="Asiste" class="form-input" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Sí">Sí, ahí estaré</option>
+                                <option value="No">No podré asistir</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="Telefono" class="form-input" placeholder="Ej. 55 1234 5678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comentarios">Comentarios (Opcional)</label>
+                            <textarea id="comentarios" name="Comentarios" class="form-input" rows="2" placeholder="Restricción alimenticia, mensaje..."></textarea>
+                        </div>
 
-                <div id="rsvp-success" style="display: none; padding: 25px 10px;">
-                    <div style="font-size: 3rem; margin-bottom: 10px;">🥂</div>
-                    <h4 style="font-family: 'Alex Brush', cursive; font-size: 3rem; color: var(--blush-pink);">¡Nos vemos en la fiesta!</h4>
-                    <p style="color: #d0d4dc; font-size: 0.95rem; margin-top: 8px;">Tu confirmación quedó registrada exitosamente.</p>
+                        <button type="submit" class="btn-silver" id="submit-btn" style="width: 100%; margin-top: 10px;">
+                            Enviar Confirmación
+                        </button>
+                    </form>
+                </div>
+
+                <div id="rsvp-success" style="display: none; padding: 25px 10px; text-align: center;">
+                    <div style="margin-bottom: 15px;">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h4 style="font-family: 'Alex Brush', cursive; font-size: 3rem; color: var(--neon-blue);">¡Gracias!</h4>
+                    <p style="color: #d0d4dc; font-size: 0.95rem; margin-top: 8px;">Tu respuesta quedó registrada exitosamente.</p>
                 </div>
             </div>
 
             <div style="margin-top: 65px; padding-bottom: 30px;">
                 <p style="font-family: 'Alex Brush', cursive; font-size: 4rem; color: #fff;">¡No faltes!</p>
-                <p style="font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--blush-pink); opacity: 0.7;">Olivia • 23 Birthday</p>
+                <p style="font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--neon-blue); opacity: 0.7;">Arturo • 15 Años</p>
             </div>
         </section>
 
     </div>
 
     <script>
-        // 1. AUDIO DIRECTO DESDE EL SEGUNDO 55 (Se activa al primer toque o scroll en la pantalla)
         const audio = document.getElementById('bg-music');
         const musicBtn = document.getElementById('music-btn');
         let audioInitialized = false;
@@ -1577,12 +1187,9 @@
             audio.play().then(() => {
                 audioInitialized = true;
                 musicBtn.classList.add('playing');
-            }).catch(() => {
-                // Esperando clic directo si el navegador aún restringe
-            });
+            }).catch(() => {});
         }
 
-        // Desbloqueo automático al tocar o deslizar cualquier parte de la invitación
         ['click', 'touchstart', 'scroll'].forEach(evt => {
             window.addEventListener(evt, startAudioAt55, { once: true, passive: true });
         });
@@ -1601,7 +1208,6 @@
             }
         }
 
-        // 2. GLOBOS ROSA MUY CLARO APERLADOS FLOTANDO A LOS LADOS (SUBIENDO CONTINUAMENTE)
         function createRisingSideBalloons() {
             const container = document.getElementById('side-balloons-container');
 
@@ -1609,34 +1215,28 @@
                 const wrap = document.createElement('div');
                 wrap.className = 'rising-balloon-wrap';
 
-                // Posicionar estrictamente en los costados (izquierdo: 0% a 14%, derecho: 82% a 96%)
                 const isLeft = forceSide !== undefined ? forceSide : Math.random() > 0.5;
                 const posX = isLeft ? (Math.random() * 13 + 1) : (Math.random() * 13 + 83);
                 wrap.style.left = posX + 'vw';
 
                 const scale = Math.random() * 0.45 + 0.65;
-                const duration = Math.random() * 9 + 13; // 13s a 22s subiendo suave
+                const duration = Math.random() * 9 + 13; 
                 wrap.style.animationDuration = duration + 's';
 
                 const uid = 'grad_' + Math.random().toString(36).substring(2, 8);
-                // SVG de globo 3D color rosa muy claro perlado con brillo especular y cordón plateado
                 wrap.innerHTML = `
                     <svg width="${95 * scale}" height="${190 * scale}" viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <radialGradient id="${uid}" cx="35%" cy="30%" r="68%">
                                 <stop offset="0%" stop-color="#ffffff"/>
-                                <stop offset="32%" stop-color="#fff0f5"/>
-                                <stop offset="72%" stop-color="#f5d0dc"/>
-                                <stop offset="100%" stop-color="#d49bae"/>
+                                <stop offset="32%" stop-color="#e6f0ff"/>
+                                <stop offset="72%" stop-color="#aaccff"/>
+                                <stop offset="100%" stop-color="#5588cc"/>
                             </radialGradient>
                         </defs>
-                        <!-- Cordón ondulado -->
                         <path d="M50 116 Q 43 145 53 168 T 47 198" stroke="rgba(255,255,255,0.65)" stroke-width="1.3" fill="none"/>
-                        <!-- Nudo del globo -->
-                        <polygon points="46,115 54,115 50,109" fill="#dfb1c0"/>
-                        <!-- Cuerpo del globo perlado -->
+                        <polygon points="46,115 54,115 50,109" fill="#7ba1e3"/>
                         <ellipse cx="50" cy="56" rx="42" ry="54" fill="url(#${uid})"/>
-                        <!-- Reflejo de luz suave -->
                         <ellipse cx="34" cy="36" rx="10" ry="18" transform="rotate(-22 34 36)" fill="rgba(255,255,255,0.75)"/>
                     </svg>
                 `;
@@ -1645,16 +1245,13 @@
                 setTimeout(() => wrap.remove(), duration * 1000);
             }
 
-            // Lanzar tanda inicial escalonada en ambos lados
             for (let i = 0; i < 8; i++) {
                 setTimeout(() => spawnBalloon(i % 2 === 0), i * 1100);
             }
-            // Flujo continuo subiendo, subiendo, subiendo
             setInterval(() => spawnBalloon(), 2200);
         }
         createRisingSideBalloons();
 
-        // 3. FONDO NOCTURNO DE DESTELLOS Y GLITTER PLATEADO/ROSA (CANVAS)
         const canvas = document.getElementById('stardust-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -1674,7 +1271,7 @@
                 alpha: Math.random(),
                 speedAlpha: (Math.random() * 0.02 + 0.005) * (Math.random() < 0.5 ? 1 : -1),
                 vy: -(Math.random() * 0.35 + 0.1),
-                color: Math.random() > 0.35 ? '#ffffff' : '#fceef2'
+                color: Math.random() > 0.35 ? '#ffffff' : '#eef4fc'
             });
         }
 
@@ -1700,7 +1297,6 @@
         }
         animateStardust();
 
-        // Explosión de glitter al tocar el globo "23"
         function triggerCelebrationBurst() {
             for (let i = 0; i < 25; i++) {
                 particles.push({
@@ -1710,14 +1306,13 @@
                     alpha: 1,
                     speedAlpha: -0.015,
                     vy: -(Math.random() * 1.8 + 0.5),
-                    color: '#f6d8e0'
+                    color: '#93c5fd'
                 });
             }
             if (particles.length > 160) particles.splice(0, 25);
         }
 
-        // 4. CRONÓMETRO (30 de Octubre 4:00 PM)
-        const targetDate = new Date("Oct 30, 2027 16:00:00").getTime();
+        const targetDate = new Date("Nov 28, 2026 17:00:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
             const diff = targetDate - now;
@@ -1728,17 +1323,7 @@
             document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
         }, 1000);
 
-        // 5. LIGHTBOX DEL COLLAGE
-        function openLightbox(el) {
-            const img = el.querySelector('img');
-            document.getElementById('lightbox-img').src = img.src;
-            document.getElementById('lightbox-modal').classList.add('active');
-        }
-        function closeLightbox() {
-            document.getElementById('lightbox-modal').classList.remove('active');
-        }
-
-        let selectedVibeText = '🥂 ¡A brindar!';
+        let selectedVibeText = 'Fachero';
 
         function selectVibe(chipEl, vibeText) {
             document.querySelectorAll('#vibe-selector .vibe-chip').forEach(c => c.classList.remove('active'));
@@ -1793,8 +1378,11 @@
             const footer = document.createElement('div');
             footer.className = 'wish-footer';
             footer.innerHTML = `
-                <span>Justo ahora ✨</span>
-                <button type="button" class="wish-like-btn liked" onclick="likeWish(this)">❤️ <span>1</span></button>
+                <span>Justo ahora</span>
+                <button type="button" class="wish-like-btn liked" onclick="likeWish(this)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                    <span>1</span>
+                </button>
             `;
 
             card.appendChild(header);
@@ -1809,14 +1397,13 @@
             triggerCelebrationBurst();
         });
 
-        // 6. ENVÍO DE CONFIRMACIÓN A TU GOOGLE SHEETS
         document.getElementById('rsvp-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = document.getElementById('submit-btn');
-            btn.innerText = "Registrando en Lista VIP...";
+            btn.innerText = "Registrando Asistencia...";
             btn.disabled = true;
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbwuOMvIrg4c7GyjCimoMUTrzR4OjUD1fK3nLAk-8KNOztYzSxJz-ylbXdxZT1LV2f_z/exec";
+            const scriptURL = "https://script.google.com/macros/s/AKfycby-nA4ys1pYDXpEfO4HDQNzRibaJbv-ddzAiaZaSauw0c5utvGPjkJxnJ4F-XOimU48Hg/exec";
             const formData = new FormData(this);
 
             fetch(scriptURL, {
