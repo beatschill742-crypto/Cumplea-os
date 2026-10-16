@@ -1144,9 +1144,9 @@
         const musicBtn = document.getElementById('music-btn');
         let audioInitialized = false;
 
-        function startAudioAt55() {
+        function startAudioAt105() {
             if (audioInitialized) return;
-            audio.currentTime = 55;
+            audio.currentTime = 105;
             audio.play().then(() => {
                 audioInitialized = true;
                 musicBtn.classList.add('playing');
@@ -1154,12 +1154,12 @@
         }
 
         ['click', 'touchstart', 'scroll'].forEach(evt => {
-            window.addEventListener(evt, startAudioAt55, { once: true, passive: true });
+            window.addEventListener(evt, startAudioAt105, { once: true, passive: true });
         });
 
         function toggleMusic() {
             if (!audioInitialized) {
-                audio.currentTime = 55;
+                audio.currentTime = 105;
                 audioInitialized = true;
             }
             if (audio.paused) {
