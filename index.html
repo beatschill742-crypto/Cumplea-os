@@ -832,7 +832,7 @@
 <body>
 
     <audio id="bg-music" loop preload="auto">
-        <source src="micancionxv.mp3" type="audio/mpeg">
+        <source src="cancionarturo.mp3" type="audio/mpeg">
     </audio>
 
     <div class="music-control" id="music-btn" onclick="toggleMusic()" title="Música de fondo">
@@ -918,7 +918,7 @@
             <div class="date-banner">
                 <div class="date-side">NOVIEMBRE</div>
                 <div class="date-center-num">28</div>
-                <div class="date-side">05:00 P.M.</div>
+                <div class="date-side">06:00 P.M.</div>
             </div>
 
             <div class="scroll-indicator">
@@ -970,11 +970,11 @@
                     <div style="margin-bottom: 10px;">
                         <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--neon-blue)" stroke-width="1.5"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
                     </div>
-                    <h4 style="font-size: 1.4rem;">All Black Everything</h4>
+                    <h4 style="font-size: 1.4rem;">All Black Casual</h4>
                     <p style="font-size: 0.95rem; margin-top: 10px;">
-                        <strong>Modo Men in Black / Elegancia Oscura.</strong><br>
+                        <strong>Modo oscuro, cómodo y con mucho estilo.</strong><br>
                         La temática de la noche es 100% vestimenta color negro. 
-                        Prepara tu outfit más cool, elegante, pero listo para disfrutar de la fiesta.
+                        Prepara tu outfit casual más cool, listo para disfrutar de la fiesta sin dejar de verte increíble.
                     </p>
                 </div>
             </div>
@@ -988,7 +988,7 @@
                 <div class="itinerary-step left">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">05:00 P.M.</span>
+                        <span class="itinerary-hour">06:00 P.M.</span>
                         <h4>Recepción</h4>
                         <p>Llegada al lugar, bienvenida y primeras fotos con los invitados.</p>
                     </div>
@@ -997,7 +997,7 @@
                 <div class="itinerary-step right">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">06:30 P.M.</span>
+                        <span class="itinerary-hour">07:00 P.M.</span>
                         <h4>Cena</h4>
                         <p>Momento de tomar asiento para disfrutar del banquete preparado.</p>
                     </div>
@@ -1007,26 +1007,17 @@
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
                         <span class="itinerary-hour">08:00 P.M.</span>
-                        <h4>Brindis & Sorpresa</h4>
-                        <p>Palabras de agradecimiento y el momento más importante de la noche.</p>
+                        <h4>¡A romper la pista!</h4>
+                        <p>Se apagan las luces, sube la música y abrimos la pista con el DJ Set.</p>
                     </div>
                 </div>
 
                 <div class="itinerary-step right">
                     <div class="itinerary-dot"></div>
                     <div class="itinerary-box">
-                        <span class="itinerary-hour">09:00 P.M.</span>
-                        <h4>¡A romper la pista!</h4>
-                        <p>Se apagan las luces, sube la música y abrimos la pista con el DJ Set.</p>
-                    </div>
-                </div>
-
-                <div class="itinerary-step left">
-                    <div class="itinerary-dot"></div>
-                    <div class="itinerary-box">
-                        <span class="itinerary-hour">12:00 A.M.</span>
-                        <h4>Tornafiesta</h4>
-                        <p>Snacks de trasnoche para recuperar energía y seguir festejando.</p>
+                        <span class="itinerary-hour">11:30 P.M.</span>
+                        <h4>Fin del evento</h4>
+                        <p>Gracias por acompañarme a vivir esta noche inolvidable.</p>
                     </div>
                 </div>
             </div>
@@ -1284,7 +1275,7 @@
             if (particles.length > 160) particles.splice(0, 25);
         }
 
-        const targetDate = new Date("Nov 28, 2026 17:00:00").getTime();
+        const targetDate = new Date("Nov 28, 2026 18:00:00").getTime();
         setInterval(() => {
             const now = new Date().getTime();
             const diff = targetDate - now;
