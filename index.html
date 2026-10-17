@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis 15 - Arturo</title>
+
+    <!-- Etiquetas para la miniatura al compartir por WhatsApp o Redes Sociales -->
+    <meta property="og:title" content="Mis 15 - Arturo">
+    <meta property="og:description" content="¡Estás invitado! Acompáñame a celebrar este gran día.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0e1116/60a5fa.png?text=15">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -1307,7 +1317,7 @@
             }
         }
 
-        document.getElementById('wish-form').addEventListener('submit', function(e) {
+        document.getElementById('wish-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             const nameInput = document.getElementById('wish-name');
             const textInput = document.getElementById('wish-text');
@@ -1316,47 +1326,21 @@
 
             if (!author || !message) return;
 
-            const wall = document.getElementById('wishes-wall-list');
-            const card = document.createElement('div');
-            card.className = 'wish-item-card';
+            // Cambiar el botón mientras se guarda en la nube
+            const btn = this.querySelector('button[type="submit"]');
+            const oldText = btn.innerText;
+            btn.innerText = "Publicando...";
+            btn.disabled = true;
 
-            const header = document.createElement('div');
-            header.className = 'wish-header';
-
-            const authorSpan = document.createElement('span');
-            authorSpan.className = 'wish-author';
-            authorSpan.textContent = author;
-
-            const badgeSpan = document.createElement('span');
-            badgeSpan.className = 'wish-badge';
-            badgeSpan.textContent = selectedVibeText;
-
-            header.appendChild(authorSpan);
-            header.appendChild(badgeSpan);
-
-            const msgP = document.createElement('p');
-            msgP.className = 'wish-message';
-            msgP.textContent = `"${message}"`;
-
-            const footer = document.createElement('div');
-            footer.className = 'wish-footer';
-            footer.innerHTML = `
-                <span>Justo ahora</span>
-                <button type="button" class="wish-like-btn liked" onclick="likeWish(this)">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-                    <span>1</span>
-                </button>
-            `;
-
-            card.appendChild(header);
-            card.appendChild(msgP);
-            card.appendChild(footer);
-
-            wall.prepend(card);
-            wall.scrollTo({ top: 0, behavior: 'smooth' });
+            // Guardar permanentemente en la base de datos
+            if (window.guardarDeseoEnLaNube) {
+                await window.guardarDeseoEnLaNube(author, message, selectedVibeText);
+            }
 
             nameInput.value = '';
             textInput.value = '';
+            btn.innerText = oldText;
+            btn.disabled = false;
             triggerCelebrationBurst();
         });
 
@@ -1382,6 +1366,109 @@
                 btn.disabled = false;
             });
         });
+    </script>
+
+    <!-- Script de Base de Datos en la Nube para los Deseos -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        let db, auth;
+        // Identificador único de tu invitación para guardar los datos
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'arturo-15';
+
+        try {
+            const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+            if (Object.keys(firebaseConfig).length > 0) {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                iniciarNube();
+            }
+        } catch(e) { 
+            console.error("No se pudo conectar a la nube", e); 
+        }
+
+        async function iniciarNube() {
+            if (!auth) return;
+            try {
+                if (typeof __initial_auth_token !== 'undefined') {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                cargarDeseos(); // Cargar mensajes una vez que conecte
+            } catch(e) { console.error("Error de conexión", e); }
+        }
+
+        function cargarDeseos() {
+            const deseosRef = collection(db, 'artifacts', appId, 'public', 'data', 'deseos');
+            
+            // onSnapshot lee los datos en la nube en tiempo real (si alguien más publica, aparece de inmediato)
+            onSnapshot(deseosRef, (snapshot) => {
+                const deseos = [];
+                snapshot.forEach(doc => {
+                    deseos.push({ id: doc.id, ...doc.data() });
+                });
+                
+                // Ordenar para que el mensaje más nuevo salga hasta arriba
+                deseos.sort((a, b) => {
+                    const tiempoA = a.fecha ? new Date(a.fecha).getTime() : 0;
+                    const tiempoB = b.fecha ? new Date(b.fecha).getTime() : 0;
+                    return tiempoB - tiempoA;
+                });
+                
+                renderizarDeseos(deseos);
+            }, (error) => {
+                console.error("Error cargando el muro", error);
+            });
+        }
+
+        function renderizarDeseos(deseos) {
+            const muro = document.getElementById('wishes-wall-list');
+            muro.innerHTML = ''; // Limpiamos para redibujar los nuevos
+            
+            deseos.forEach(deseo => {
+                const card = document.createElement('div');
+                card.className = 'wish-item-card';
+                card.innerHTML = `
+                    <div class="wish-header">
+                        <span class="wish-author">${escaparHTML(deseo.autor)}</span>
+                        <span class="wish-badge">${escaparHTML(deseo.etiqueta)}</span>
+                    </div>
+                    <p class="wish-message">"${escaparHTML(deseo.mensaje)}"</p>
+                    <div class="wish-footer">
+                        <span>Publicado</span>
+                        <button type="button" class="wish-like-btn" onclick="likeWish(this)">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                            <span>1</span>
+                        </button>
+                    </div>
+                `;
+                muro.appendChild(card);
+            });
+        }
+
+        // Seguridad para evitar que los invitados rompan la página usando símbolos raros
+        function escaparHTML(texto) {
+            if (!texto) return '';
+            return texto.replace(/[&<>'"]/g, char => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+            }[char]));
+        }
+
+        // Función global que se activa cuando le dan a "Publicar"
+        window.guardarDeseoEnLaNube = async function(autor, mensaje, etiqueta) {
+            if (!auth || !auth.currentUser) return;
+            const deseosRef = collection(db, 'artifacts', appId, 'public', 'data', 'deseos');
+            await addDoc(deseosRef, {
+                autor: autor,
+                mensaje: mensaje,
+                etiqueta: etiqueta,
+                fecha: new Date().toISOString()
+            });
+        }
     </script>
 </body>
 </html>
